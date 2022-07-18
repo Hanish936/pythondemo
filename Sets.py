@@ -1,0 +1,20 @@
+s=set()
+#firstset=set([1,3,4])
+#l=[1,2,3,4,5,6]
+#firstset=set(l)
+#print(firstset)
+s.add(1)
+s.add(1)#Set always retain unique value
+s.add(2)
+
+#S1=s.union([1,2,3])
+S1=s.intersection([1,2,3])
+print(s,S1)
+print(len(s))
+print(min(s))
+print(max(s))
+s2=set([4,6])
+s.remove(2)
+print(s)
+print(s2)
+print(S1.isdisjoint(s2))
