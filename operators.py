@@ -1,3 +1,4 @@
+"""
 #arthematic operators
 # +,-,*,/,//,**,%
 #realtional operator
@@ -154,8 +155,23 @@ def triangle(n):
 # Driver Code
 n = 5
 triangle(n)
+"""
+
+#outer function varibale in inner function
+#def outerFunction(a, b):
+    #def innerFunction(c, d):
+     ##   return c*d
+    #return innerFunction(a, b)he
+#print(outerFunction(10, 20))
 
 
-
-
+var=input("Enter a string")
+dict={}
+for n in var:
+    keys=dict.keys()
+    if n in keys:
+        dict[n]+=1
+    else:
+        dict[n]=1
+print(dict)
 
