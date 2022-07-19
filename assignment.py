@@ -1,5 +1,4 @@
 #1. Write a Python program to calculate the length of a string.
-
 var1="this is a string"
 print(len(var1))
 
@@ -32,7 +31,7 @@ def string_both_ends(str):
 print(string_both_ends('w3resource'))
 print(string_both_ends('w3'))
 print(string_both_ends('w'))
-
+a
 #4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
 #Sample String : 'restart'
 #Expected Result : 'resta$t'
