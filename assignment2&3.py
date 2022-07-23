@@ -1,4 +1,3 @@
-
 #palindrome
 n = 1441
 temp = n

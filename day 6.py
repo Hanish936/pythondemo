@@ -155,6 +155,7 @@ b = 20
 
 def _init_(self)
 """
+"""
 ...........Inheritence........
 the
 process
@@ -500,8 +501,8 @@ sqrt()
 #2.
 #USER
 #DEFINED::
+"""
 
-# Python program to demonstrate
 # single inheritance
 
 # Base class
@@ -510,6 +511,8 @@ class Parent:
 		print("This function is in parent class.")
 
 # Derived class
+
+
 class Child(Parent):
 	def func2(self):
 		print("This function is in child class.")
@@ -520,17 +523,13 @@ object.func1()
 object.func2()
 
 
-# Python program to demonstrate
 # multiple inheritance
 
-# Base class1
 class Mother:
 	mothername = ""
 
 	def mother(self):
 		print(self.mothername)
-
-# Base class2
 
 class Father:
 	fathername = ""
@@ -538,7 +537,6 @@ class Father:
 	def father(self):
 		print(self.fathername)
 
-# Derived class
 
 class Son(Mother, Father):
 	def parents(self):
@@ -551,31 +549,23 @@ s1.fathername = "RAM"
 s1.mothername = "SITA"
 s1.parents()
 
-# Python program to demonstrate
 # multilevel inheritance
-# Base class
 
 class Grandfather:
 
 	def __init__(self, grandfathername):
 		self.grandfathername = grandfathername
 
-# Intermediate class
-
 class Father(Grandfather):
 	def __init__(self, fathername, grandfathername):
 		self.fathername = fathername
 
-		# invoking constructor of Grandfather class
 		Grandfather.__init__(self, grandfathername)
-
-# Derived class
 
 class Son(Father):
 	def __init__(self, sonname, fathername, grandfathername):
 		self.sonname = sonname
-
-		# invoking constructor of Father class
+m
 		Father.__init__(self, fathername, grandfathername)
 
 	def print_name(self):
@@ -588,24 +578,14 @@ s1 = Son('Prince', 'Rampal', 'Lal mani')
 print(s1.grandfathername)
 s1.print_name()
 
-# Python program to demonstrate
 # Hierarchical inheritance
 
-
-# Base class
 class Parent:
 	def func1(self):
 		print("This function is in parent class.")
-
-# Derived class1
-
-
 class Child1(Parent):
 	def func2(self):
 		print("This function is in child 1.")
-
-# Derivied class2
-
 
 class Child2(Parent):
 	def func3(self):
@@ -619,32 +599,62 @@ object1.func2()
 object2.func1()
 object2.func3()
 
-# Python program to demonstrate
 # hybrid inheritance
-
 
 class School:
 	def func1(self):
 		print("This function is in school.")
-
-
 class Student1(School):
 	def func2(self):
 		print("This function is in student 1. ")
-
-
 class Student2(School):
 	def func3(self):
 		print("This function is in student 2.")
-
-
 class Student3(Student1, School):
 	def func4(self):
 		print("This function is in student 3.")
-
 object = Student3()
 object.func1()
 object.func2()
+
+#polymorphism
+
+class Bird:
+    def intro(self):
+        print("There are different types of birds")
+
+    def flight(self):
+        print("Most of the birds can fly but some cannot")
+
+
+class parrot(Bird):
+    def flight(self):
+        print("Parrots can fly")
+
+
+class penguin(Bird):
+    def flight(self):
+        print("Penguins do not fly")
+
+obj_bird = Bird()
+obj_parr = parrot()
+obj_peng = penguin()
+
+obj_bird.intro()
+obj_bird.flight()
+
+obj_parr.intro()
+obj_parr.flight()
+
+obj_peng.intro()
+obj_peng.flight()
+
+
+#modules
+from math import sqrt, factorial
+
+print(sqrt(16))
+print(factorial(6))
 
 
 
