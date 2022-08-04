@@ -1,19 +1,19 @@
+
 from tkinter import *
-from tkinter import messagebox
 
 from mysql import connector
-
-
-def database():
-    conn = connector.connect(user='root', password='root', host='127.0.0.1', port='3306', database='demo1')
-    mycursor = conn.cursor()
-    mycursor.execute("insert int form values (%s,%d,%s,%d)", (c.get(), j.get(), e.get(), h.get()))
-    conn.commit()
-
 
 root = Tk()
 root.geometry('500x500')
 root.title("Registration Form")
+
+
+def database():
+    conn = connector.connect(user='root', password='hanish08', host='127.0.0.1', port='3306', database='demo1')
+    mycursor = conn.cursor()
+    mycursor.execute("insert into form values (%s,%s,%s,%s)", (c.get(), j.get(), e.get(), h.get()))
+    conn.commit()
+
 
 a = Label(root, text="Registration form", width=20, font=("bold", 20))
 a.place(x=60, y=30)
