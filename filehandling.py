@@ -1,5 +1,5 @@
-FILE
-HANDLING...................................................................
+#FILE
+#HANDLING...................................................................
 """
 :::::jdo
 data
@@ -21,7 +21,7 @@ fxn
 
 f = open('test1.txt', 'r+')
 f.write("Good Morning")
-f.writelines(["komal\n", "meena\n", "shanti\n"])
+f.writelines(["ko-mal\n", "meena\n", "shanti\n"])
 print(f.read())
 
 # print(f.read(5))
@@ -33,7 +33,7 @@ t = open('demo.txt', 'r')
 # print('char',t.read())
 
 
-eg2::  f = open('test.txt', 'a')
+#eg2::  f = open('test.txt', 'a')
 f.writelines(["suman", "jatinder"])
 f.close()
 g = open('test.txt', 'r')
